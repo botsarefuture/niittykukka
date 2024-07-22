@@ -7,90 +7,99 @@
     <title>NIITTYKUKKA</title>
     <style>
         @font-face {
-    font-family: 'FucXed';
-    src: url('FUCXEDCAPSLatin.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'FucXed';
+            src: url('FUCXEDCAPSLatin.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'Crimson Text';
-    src: url('CrimsonText-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'Crimson Text';
+            src: url('CrimsonText-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-body {
-    font-family: 'Crimson Text', serif;
-    background-color: #f1f1f1;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Tumma teksti */
-    background-image: url('taustakuva.jpg'); /* Korvaa 'taustakuva.jpg' oikealla polulla */
-    background-size: cover;
-    background-position: center;
-}
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Tumma teksti */
+            background-image: url('taustakuva.jpg'); /* Korvaa 'taustakuva.jpg' oikealla polulla */
+            background-size: cover;
+            background-position: center;
+        }
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
 
-h1, h2, h3 {
-    font-family: 'FucXed', sans-serif;
-    text-transform: uppercase;
-    color: #006400; /* Tumma vihreä teksti */
-}
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: auto;
+            width: 100px; /* Rajoittaa logon leveyden 100 pikseliin */
+            max-height: 80px; /* Rajoittaa logon korkeuden 80 pikseliin */
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-}
+        h1, h2, h3 {
+            font-family: 'FucXed', sans-serif;
+            text-transform: uppercase;
+            color: #006400; /* Tumma vihreä teksti */
+        }
 
-nav a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-nav a:hover {
-    background-color: #575757;
-}
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-.container {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 20px;
-    border-radius: 10px;
-}
+        nav a:hover {
+            background-color: #575757;
+        }
 
-.button {
-    background-color: #006400; /* Tumma vihreä nappi */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
 
-.button:hover {
-    background-color: #004d00; /* Tummempi vihreä hover */
-}
+        .button {
+            background-color: #006400; /* Tumma vihreä nappi */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.sources {
-    font-size: 0.9em;
-    color: #333; /* Tumma teksti */
-}
+        .button:hover {
+            background-color: #004d00; /* Tummempi vihreä hover */
+        }
 
+        .sources {
+            font-size: 0.9em;
+            color: #333; /* Tumma teksti */
+        }
     </style>
 </head>
 
@@ -100,12 +109,9 @@ nav a:hover {
         <p>MIELENOSOITUS PÖLYTTÄJIEN PUOLESTA</p>
         <p>4.8. KLO 14</p>
         <p>LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
+        <p>Järjestäjänä: Elokapina</p>
+        <img src="logo.svg" alt="Elokapina Logo">
     </header>
-    <nav>
-        <a href="#home">Etusivu</a>
-        <a href="#about">Tietoa</a>
-        <a href="#contact">Yhteystiedot</a>
-    </nav>
     <div class="container">
         <h2>Miksi osoitamme mieltä?</h2>
         <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten pölytyksestä.<sup>[1][2]</sup></p>
