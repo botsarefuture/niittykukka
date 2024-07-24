@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIITTYKUKKA</title>
+    <title>Pölyttäjien puolesta!</title>
     <style>
         @font-face {
             font-family: 'FucXed';
@@ -22,21 +22,44 @@
 
         body {
             font-family: 'Crimson Text', serif;
-            background-color: #f1f1f1;
+            background-color: #e0f7fa;
+            /* Vaalea turkoosi taustaväri */
             margin: 0;
             padding: 0;
-            color: #333; /* Tumma teksti */
-            background-image: url('taustakuva.jpg'); /* Korvaa 'taustakuva.jpg' oikealla polulla */
-            background-size: cover;
-            background-position: center;
+            color: #333;
+            /* Tumma teksti */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
+            background-color: #004d40;
+            /* Tumma vihreä taustaväri */
+            color: #ffffff;
+            /* Valkoinen teksti */
             padding: 20px;
             text-align: center;
             position: relative;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
 
         header img {
@@ -44,44 +67,74 @@
             top: 10px;
             left: 10px;
             height: auto;
-            width: 100px; /* Rajoittaa logon leveyden 100 pikseliin */
-            max-height: 80px; /* Rajoittaa logon korkeuden 80 pikseliin */
+            width: 100px;
+            /* Rajoittaa logon leveyden 100 pikseliin */
+            max-height: 80px;
+            /* Rajoittaa logon korkeuden 80 pikseliin */
+            animation: rotateIn 1.5s ease-in-out;
         }
 
-        h1, h2, h3 {
+        @keyframes rotateIn {
+            0% {
+                transform: rotate(-360deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        h1,
+        h2,
+        h3 {
             font-family: 'FucXed', sans-serif;
             text-transform: uppercase;
-            color: #006400; /* Tumma vihreä teksti */
+            color: #004d40;
+            /* Tumma vihreä teksti */
+            animation: fadeIn 2s ease-in-out;
+            /* Musta varjo tekstin taustalle */
         }
+
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #00796b;
+            /* Keskivihreä taustaväri */
+            margin-top: -10px;
         }
 
         nav a {
-            color: #fff;
+            color: #ffffff;
+            /* Valkoinen teksti */
             padding: 14px 20px;
             text-decoration: none;
             text-transform: uppercase;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #575757;
+            background-color: #004d40;
+            /* Tumma vihreä hover */
         }
 
         .container {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: #ffffff;
+            /* Valkoinen taustaväri */
             margin: 20px;
             border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /* Varjo laatikon ympärillä */
+            animation: fadeIn 2s ease-in-out;
         }
 
         .button {
-            background-color: #006400; /* Tumma vihreä nappi */
+            background-color: #004d40;
+            /* Tumma vihreä nappi */
             border: none;
-            color: white;
+            color: #ffffff;
+            /* Valkoinen teksti */
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -90,48 +143,132 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .button:hover {
-            background-color: #004d00; /* Tummempi vihreä hover */
+            background-color: #00251a;
+            /* Erittäin tumma vihreä hover */
+            transform: scale(1.05);
         }
 
         .sources {
             font-size: 0.9em;
-            color: #333; /* Tumma teksti */
+            color: #333;
+            /* Tumma teksti */
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #004d40;
+            /* Tumma vihreä reunus */
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #00796b;
+            /* Keskivihreä reunus fokuksessa */
+        }
+
+        .footer {
+            background-color: #004d40;
+            /* Tumma vihreä taustaväri */
+            color: #ffffff;
+            /* Valkoinen teksti */
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>NIITTYKUKKA</h1>
-        <p>MIELENOSOITUS PÖLYTTÄJIEN PUOLESTA</p>
-        <p>4.8. KLO 14</p>
-        <p>LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
+        <h1 style="color: white;">Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
+        <p>"Niittykukka" -mielenosoitukset pölyttäjien puolesta!</p>
+        <p>4.8. KLO 14: LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
         <p>Järjestäjänä: Elokapina</p>
         <img src="logo.svg" alt="Elokapina Logo">
     </header>
-    <div class="container">
+
+    <nav>
+        <a href="#miksi">Miksi</a>
+        <a href="#tule-mukaan">Tule mukaan</a>
+        <a href="#tapahtumat">Tapahtumat</a>
+        <a href="#lähteet">Lähteet</a>
+    </nav>
+
+    <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
-        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten pölytyksestä.<sup>[1][2]</sup></p>
-        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse syntymään.<sup>[4]</sup></p>
+        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten
+            pölytyksestä.<sup>[1][2]</sup></p>
+        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse
+            syntymään.<sup>[4]</sup></p>
         <p>Pölyttäjäkato kiihtyy ilmaston lämpenemisen seurauksena.</p>
         <p>Kato on suuri uhka globaalille ruoantuotannolle, ja sitä kautta myös ihmiskunnan tulevaisuudelle.</p>
-        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena, minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu entisestään.<sup>[3]</sup></p>
-        
+        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena,
+            minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu
+            entisestään.<sup>[3]</sup></p>
+        <a href="#lähteet">Lähteet</a>
+
+    </div>
+
+    <div class="container" id="tule-mukaan">
         <h3>Tule mukaan!</h3>
-        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
-        <button class="button">Liity meihin</button>
-        <button class="button">Lue lisää</button>
-        
+        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien
+            puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
+        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button"
+            target="_blank">Liity</a>
+        <!-- TODO: make this actually do something lol
+            <button class="button">Lue lisää</button>-->
+    </div>
+
+    <div class="container" id="tapahtumat">
+        <h3>Tulevat tapahtumat</h3>
+        <p>Seuraavat mielenosoitukset:</p>
+        <ul>
+            <li>4.8. klo 14: Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</li>
+            <!--<li>15.9. klo 12: Keskustelu ja mielenosoitus Töölönlahden puistossa</li>
+            <li>1.10. klo 15: Marssi Kaisaniemen puistosta Rautatientorille</li>-->
+        </ul>
+    </div>
+
+    <div class="container" id="lähteet">
         <h3>Lähteet</h3>
         <div class="sources">
-            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
-            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en" target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a></p>
-            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408" target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
+            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia
+                tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
+            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en"
+                    target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a>
+            </p>
+            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408"
+                    target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
             <p>[4]: <a href="https://yle.fi/a/3-12521737" target="_blank">https://yle.fi/a/3-12521737</a></p>
         </div>
+    </div>
+
+    <div class="container" id="yhteys">
+        <h3>Ota yhteyttä</h3>
+        <p>Ei käy.</p>
+        <!--<div class="form-container">
+            <input type="text" placeholder="Nimesi">
+            <input type="email" placeholder="Sähköpostiosoitteesi">
+            <textarea placeholder="Viesti"></textarea>
+            <button class="button">Lähetä</button>
+        </div>-->
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Elokapina. Kaikki oikeudet pidätetään.</p>
     </div>
 </body>
 
