@@ -12,6 +12,13 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: 'FucXedLatin';
+            src: url('FUCXEDCAPSLatin.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
 
         @font-face {
             font-family: 'Crimson Text';
@@ -23,11 +30,9 @@
         body {
             font-family: 'Crimson Text', serif;
             background-color: #e0f7fa;
-            /* Vaalea turkoosi taustaväri */
             margin: 0;
             padding: 0;
             color: #333;
-            /* Tumma teksti */
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -43,9 +48,7 @@
 
         header {
             background-color: #004d40;
-            /* Tumma vihreä taustaväri */
             color: #ffffff;
-            /* Valkoinen teksti */
             padding: 20px;
             text-align: center;
             position: relative;
@@ -68,9 +71,7 @@
             left: 10px;
             height: auto;
             width: 100px;
-            /* Rajoittaa logon leveyden 100 pikseliin */
             max-height: 80px;
-            /* Rajoittaa logon korkeuden 80 pikseliin */
             animation: rotateIn 1.5s ease-in-out;
         }
 
@@ -90,23 +91,17 @@
             font-family: 'FucXed', sans-serif;
             text-transform: uppercase;
             color: #004d40;
-            /* Tumma vihreä teksti */
             animation: fadeIn 2s ease-in-out;
-            /* Musta varjo tekstin taustalle */
         }
-
 
         nav {
             display: flex;
             justify-content: center;
             background-color: #00796b;
-            /* Keskivihreä taustaväri */
-            margin-top: -10px;
         }
 
         nav a {
             color: #ffffff;
-            /* Valkoinen teksti */
             padding: 14px 20px;
             text-decoration: none;
             text-transform: uppercase;
@@ -115,29 +110,21 @@
 
         nav a:hover {
             background-color: #004d40;
-            /* Tumma vihreä hover */
         }
-
-        /* Hide the navbar on mobile devices */
-
 
         .container {
             padding: 20px;
             background-color: #ffffff;
-            /* Valkoinen taustaväri */
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            /* Varjo laatikon ympärillä */
             animation: fadeIn 2s ease-in-out;
         }
 
         .button {
             background-color: #004d40;
-            /* Tumma vihreä nappi */
             border: none;
             color: #ffffff;
-            /* Valkoinen teksti */
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -151,14 +138,12 @@
 
         .button:hover {
             background-color: #00251a;
-            /* Erittäin tumma vihreä hover */
             transform: scale(1.05);
         }
 
         .sources {
             font-size: 0.9em;
             color: #333;
-            /* Tumma teksti */
         }
 
         .form-container {
@@ -173,87 +158,75 @@
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #004d40;
-            /* Tumma vihreä reunus */
             transition: border-color 0.3s ease;
         }
 
         input:focus,
         textarea:focus {
             border-color: #00796b;
-            /* Keskivihreä reunus fokuksessa */
         }
 
         .footer {
             background-color: #004d40;
-            /* Tumma vihreä taustaväri */
             color: #ffffff;
-            /* Valkoinen teksti */
             text-align: center;
             padding: 20px;
         }
 
-        /* Base styles for the navbar links */
         .nav-links {
             display: flex;
             justify-content: center;
         }
 
-        /* Hide the menu links on mobile by default */
-        .nav-links {
-            display: none;
-        }
-
-        /* Show the menu links when the button is clicked */
         .mobile-menu-button {
             display: none;
         }
 
-        /* Mobile styles */
         @media (max-width: 768px) {
             .nav-links {
-                display: hidden;
+                display: none;
             }
 
             .mobile-menu-button {
                 display: block;
-                /* Näytä mobiilimenupainike */
                 background: none;
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
                 color: #ffffff;
                 padding-top: 7px;
-                /* Valkoinen teksti */
             }
 
             header img {
-                display: hidden;
+                display: none;
             }
 
-            /* Style the navigation links to appear in a vertical stack */
             .nav-links a {
                 display: block;
                 padding: 10px;
                 text-align: center;
                 background-color: #004d40;
-                /* Tumma vihreä taustaväri */
                 color: #ffffff;
-                /* Valkoinen teksti */
                 text-decoration: none;
             }
 
-            /* Change the background color on hover */
             .nav-links a:hover {
                 background-color: #00251a;
-                /* Erittäin tumma vihreä hover */
             }
         }
+
+        .title {
+            color: 
+        }
+
     </style>
+        <link rel="stylesheet" href="https://elokapina.fi/assets/main.css?20240724153603">
+
 </head>
 
 <body>
     <header>
-        <h1 style="color: white;">Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
+        <h1>Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
         <p>"Niittykukka" -mielenosoitukset pölyttäjien puolesta!</p>
         <p>4.8. KLO 14: LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
         <p>Järjestäjänä: Elokapina</p>
@@ -271,28 +244,22 @@
         </div>
     </nav>
 
-
     <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
-        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten
-            pölytyksestä.<sup>[1][2]</sup></p>
-        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse
-            syntymään.<sup>[4]</sup></p>
+        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten pölytyksestä.<sup>[1][2]</sup></p>
+        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse syntymään.<sup>[4]</sup></p>
         <p>Pölyttäjäkato kiihtyy ilmaston lämpenemisen seurauksena.</p>
         <p>Kato on suuri uhka globaalille ruoantuotannolle, ja sitä kautta myös ihmiskunnan tulevaisuudelle.</p>
-        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena,
-            minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu
-            entisestään.<sup>[3]</sup></p>
+        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena, minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu entisestään.<sup>[3]</sup></p>
         <a href="#lähteet">Lähteet</a>
-
     </div>
+
+    
 
     <div class="container" id="tule-mukaan">
         <h3>Tule mukaan!</h3>
-        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien
-            puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
-        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button"
-            target="_blank">Liity</a>
+        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
+        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button" target="_blank">Liity</a>
     </div>
 
     <div class="container" id="tapahtumat">
@@ -300,46 +267,8 @@
         <p>Seuraavat mielenosoitukset:</p>
         <ul>
             <li>4.8. klo 14: Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</li>
-            <!--<li>15.9. klo 12: Keskustelu ja mielenosoitus Töölönlahden puistossa</li>
-            <li>1.10. klo 15: Marssi Kaisaniemen puistosta Rautatientorille</li>-->
         </ul>
     </div>
-
-    <div class="container" id="lähteet">
-        <h3>Lähteet</h3>
-        <div class="sources">
-            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia
-                tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
-            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en"
-                    target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a>
-            </p>
-            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408"
-                    target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
-            <p>[4]: <a href="https://yle.fi/a/3-12521737" target="_blank">https://yle.fi/a/3-12521737</a></p>
-        </div>
-    </div>
-
-    <div class="container" id="yhteys">
-        <h3>Ota yhteyttä</h3>
-        <p>Saat yhteyden 4Bees projektin vapaaehtoisiin osoitteesta: <a href="mailto:info@4bees.fi">info(at)4bees.fi</a>
-        </p>
-        <!--<div class="form-container">
-            <input type="text" placeholder="Nimesi">
-            <input type="email" placeholder="Sähköpostiosoitteesi">
-            <textarea placeholder="Viesti"></textarea>
-            <button class="button">Lähetä</button>
-        </div>-->
-    </div>
-
-    <div class="footer">
-        <p>© 2024 Elokapina. Kaikki oikeudet pidätetään.</p>
-    </div>
-    <script>
-        document.querySelector('.mobile-menu-button').addEventListener('click', function () {
-            var navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = (navLinks.style.display === 'block' ? 'none' : 'block');
-        });
-    </script>
 </body>
 
 </html>
