@@ -227,3 +227,52 @@ textarea:focus {
 .title {
   color: var(--color-yellow);
 }
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #004d40;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #004d40;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure menu is on top */
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #ffffff;
+        padding-top: 7px;
+    }
+}

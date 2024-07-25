@@ -21,7 +21,7 @@
     </header>
 
     <nav id="navbar">
-        <button class="mobile-menu-button" aria-label="Open menu">☰</button>
+        <button class="mobile-menu-button" aria-label="Open menu">VALIKKO</button>
         <div class="nav-links">
             <a href="#miksi">Miksi</a>
             <a href="#tule-mukaan">Tule mukaan</a>
@@ -30,6 +30,7 @@
             <a href="#yhteys">Yhteys</a>
         </div>
     </nav>
+    
 
     <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
@@ -74,7 +75,6 @@
                 <h4>4.8. klo 14:00</h4>
                 <p>Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</p>
             </div>
-            <!-- Add more events as needed -->
         </div>
     </div>
     
@@ -103,7 +103,18 @@
             margin: 0;
         }
     </style>
-    
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+        });
+    });
+</script>
+
     
 </body>
 
