@@ -118,6 +118,9 @@
             /* Tumma vihreä hover */
         }
 
+        /* Hide the navbar on mobile devices */
+
+
         .container {
             padding: 20px;
             background-color: #ffffff;
@@ -188,6 +191,63 @@
             text-align: center;
             padding: 20px;
         }
+
+        /* Base styles for the navbar links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Hide the menu links on mobile by default */
+        .nav-links {
+            display: none;
+        }
+
+        /* Show the menu links when the button is clicked */
+        .mobile-menu-button {
+            display: none;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: hidden;
+            }
+
+            .mobile-menu-button {
+                display: block;
+                /* Näytä mobiilimenupainike */
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #ffffff;
+                padding-top: 7px;
+                /* Valkoinen teksti */
+            }
+
+            header img {
+                display: hidden;
+            }
+
+            /* Style the navigation links to appear in a vertical stack */
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                background-color: #004d40;
+                /* Tumma vihreä taustaväri */
+                color: #ffffff;
+                /* Valkoinen teksti */
+                text-decoration: none;
+            }
+
+            /* Change the background color on hover */
+            .nav-links a:hover {
+                background-color: #00251a;
+                /* Erittäin tumma vihreä hover */
+            }
+        }
     </style>
 </head>
 
@@ -200,12 +260,17 @@
         <img src="logo.svg" alt="Elokapina Logo">
     </header>
 
-    <nav>
-        <a href="#miksi">Miksi</a>
-        <a href="#tule-mukaan">Tule mukaan</a>
-        <a href="#tapahtumat">Tapahtumat</a>
-        <a href="#lähteet">Lähteet</a>
+    <nav id="navbar">
+        <button class="mobile-menu-button" aria-label="Open menu">☰</button>
+        <div class="nav-links">
+            <a href="#miksi">Miksi</a>
+            <a href="#tule-mukaan">Tule mukaan</a>
+            <a href="#tapahtumat">Tapahtumat</a>
+            <a href="#lähteet">Lähteet</a>
+            <a href="#yhteys">Yhteys</a>
+        </div>
     </nav>
+
 
     <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
@@ -228,8 +293,6 @@
             puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
         <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button"
             target="_blank">Liity</a>
-        <!-- TODO: make this actually do something lol
-            <button class="button">Lue lisää</button>-->
     </div>
 
     <div class="container" id="tapahtumat">
@@ -258,7 +321,8 @@
 
     <div class="container" id="yhteys">
         <h3>Ota yhteyttä</h3>
-        <p>Ei käy.</p>
+        <p>Saat yhteyden 4Bees projektin vapaaehtoisiin osoitteesta: <a href="mailto:info@4bees.fi">info(at)4bees.fi</a>
+        </p>
         <!--<div class="form-container">
             <input type="text" placeholder="Nimesi">
             <input type="email" placeholder="Sähköpostiosoitteesi">
@@ -270,6 +334,12 @@
     <div class="footer">
         <p>© 2024 Elokapina. Kaikki oikeudet pidätetään.</p>
     </div>
+    <script>
+        document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = (navLinks.style.display === 'block' ? 'none' : 'block');
+        });
+    </script>
 </body>
 
 </html>
