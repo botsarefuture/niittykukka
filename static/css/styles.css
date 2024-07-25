@@ -72,7 +72,6 @@
     height: auto;
     width: 100px;
     max-height: 80px;
-    animation: rotateIn 1.5s ease-in-out;
   }
   
   @keyframes rotateIn {
