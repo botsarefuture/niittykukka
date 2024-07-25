@@ -4,19 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pölyttäjien puolesta!</title>
+    <title>Pölyttäjien puolesta - Elokapina</title>
     <link rel="stylesheet" href="static/css/xr_fi.css">
     <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        /* General Styles */
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f8e9;
+            color: #333;
+        }
 
+        header {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #00796b;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            border: 2px solid #004d40;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+
+        .container h2, .container h3 {
+            color: #004d40;
+            margin-bottom: 15px;
+            font-family: 'Fucxed', sans-serif;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        .container h3 {
+            font-size: 1.6em;
+        }
+
+        .program-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-list li {
+            background-color: #ffffff;
+            border: 2px solid #004d40;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .program-list li:hover {
+            background-color: #e0f2f1;
+        }
+
+        .program-list li strong {
+            color: #004d40;
+            font-size: 1.2em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #004d40;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            max-width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #00332a;
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-button {
+            display: none; /* Hidden by default */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 1.8em;
+            }
+
+            .info-box {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .container h2, .container h3 {
+                font-size: 1.6em;
+            }
+
+            .container h3 {
+                font-size: 1.4em;
+            }
+
+            .program-list li {
+                padding: 15px;
+            }
+
+            .button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #004d40;
+                width: calc(100% - 40px);
+                border-radius: 8px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+                padding: 15px;
+                text-decoration: none;
+                font-size: 1.2em;
+                display: block;
+            }
+
+            .nav-links a:hover {
+                background-color: #00796b;
+            }
+
+            .mobile-menu-button {
+                display: inline-block;
+                padding: 10px;
+                background-color: #004d40;
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                margin: 10px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Fucxed', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1 class="title">Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
-        <p>"Niittykukka" -mielenosoitukset pölyttäjien puolesta!</p>
-        <p>4.8. KLO 14: LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
-        <p>Järjestäjänä: Elokapina</p>
-        <img src="logo.svg" alt="Elokapina Logo">
+        <h1 class="title">Niittykukka -kampanja: <br>Pölyttäjien puolesta - Pölyttäjäkatoa vastaan</h1>
+        <p>Kampanja pölyttäjäkadon torjumiseksi</p>
+        <img src="logo.svg" alt="Elokapina Logo" style="max-width: 150px; margin-top: 10px;">
     </header>
 
     <nav id="main-nav">
@@ -24,97 +226,59 @@
         <div class="nav-links">
             <a href="#miksi">Miksi</a>
             <a href="#tule-mukaan">Tule mukaan</a>
-            <a href="#tapahtumat">Tapahtumat</a>
+            <a href="program.html">Ohjelma</a>
+            <!--<a href="events.html">Tulevat tapahtumat</a>-->
             <a href="#lähteet">Lähteet</a>
         </div>
     </nav>
+
+    <div class="info-box">
+        <p><strong>Seuraava mielenosoitus:</strong> 4.8.2024 klo 14:00 alkaen</p>
+        <p><strong>📍</strong> Kokoontuminen Eduskuntatalon edessä, josta marssimme Kauppatorille</p>
+        <p><a href="https://www.facebook.com/events/1026913088777507/" class="button" target="_blank">Facebook-tapahtuma</a></p>
+    </div>
     
 
     <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
-        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten
-            pölytyksestä.<sup>[1][2]</sup></p>
-        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse
-            syntymään.<sup>[4]</sup></p>
+        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten pölytyksestä.<sup>[1][2]</sup></p>
+        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse syntymään.<sup>[4]</sup></p>
         <p>Pölyttäjäkato kiihtyy ilmaston lämpenemisen seurauksena.</p>
         <p>Kato on suuri uhka globaalille ruoantuotannolle, ja sitä kautta myös ihmiskunnan tulevaisuudelle.</p>
-        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena,
-            minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu
-            entisestään.<sup>[3]</sup></p>
+        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena, minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu entisestään.<sup>[3]</sup></p>
         <a href="#lähteet">Lähteet</a>
     </div>
 
     <div class="container" id="lähteet">
         <h3>Lähteet</h3>
         <div class="sources">
-            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia
-                tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
-            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en"
-                    target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a>
-            </p>
-            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408"
-                    target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
+            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
+            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en" target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a></p>
+            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408" target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
             <p>[4]: <a href="https://yle.fi/a/3-12521737" target="_blank">https://yle.fi/a/3-12521737</a></p>
         </div>
     </div>
 
     <div class="container" id="tule-mukaan">
         <h3>Tule mukaan!</h3>
-        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien
-            puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
-        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button"
-            target="_blank">Ilmoittaudu tästä vapaaehtoiseksi projektiin</a>
-        <a href="https://cryptpad.fr/form/#/2/form/view/xm3dBlzlwMWshB7IDu69U4LKX34ivSQHao00Y707oK0/" class="button" target="_blank">Ilmoittaudu tukirooliin mielenosoitukseen!</a>
-    </div>
-
-    <div class="container" id="tapahtumat">
-        <h3>Tulevat tapahtumat</h3>
-        <div class="event-grid">
-            <div class="event-box">
-                <h4>4.8. klo 14:00</h4>
-                <p>Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</p>
-            </div>
+        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
+        <div class="button-container">
+            <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button" target="_blank">Ilmoittaudu tästä vapaaehtoiseksi projektiin</a>
+            <a href="https://cryptpad.fr/form/#/2/form/view/xm3dBlzlwMWshB7IDu69U4LKX34ivSQHao00Y707oK0/" class="button" target="_blank">Ilmoittaudu tukirooliin mielenosoitukseen!</a>
         </div>
     </div>
-    
-    <style>
-        .event-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-    
-        .event-box {
-            background-color: #f1f8e9;
-            border: 2px solid #004d40;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s ease-in-out;
-        }
-    
-        .event-box h4 {
-            color: var(--color-teal);
-            margin: 0 0 10px 0;
-        }
-    
-        .event-box p {
-            margin: 0;
-        }
-    </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.querySelector('.mobile-menu-button');
-        const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
 
-        menuButton.addEventListener('click', function() {
-            navLinks.classList.toggle('open');
+            menuButton.addEventListener('click', function () {
+                navLinks.classList.toggle('open');
+            });
         });
-    });
-</script>
+    </script>
 
-    
 </body>
 
 </html>

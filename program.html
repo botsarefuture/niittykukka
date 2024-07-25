@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohjelma - Pölyttäjien puolesta!</title>
+    <link rel="stylesheet" href="static/css/xr_fi.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f8e9;
+        }
+        
+        header {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #00796b;
+        }
+        
+        .title {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #00796b;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #004d40;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+
+        .program-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .program-list li {
+            background-color: #ffffff;
+            border: 2px solid #004d40;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .program-list li strong {
+            color: #004d40;
+            font-size: 1.3em;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: var(--color-neon-pink);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #00332a;
+            transform: scale(1.05);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .program-list li {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .button {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .mobile-menu-button {
+                display: inline-block;
+                padding: 10px;
+                background-color: #004d40;
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Ohjelma</h1>
+        <p>4.8. Mielenosoituksen ohjelma</p>
+        <a href="index.html" class="button">Palaa pääsivulle</a>
+        <!--<nav id="main-nav">
+            <button class="mobile-menu-button" aria-label="Open menu">VALIKKO</button>
+            <div class="nav-links">
+                <a href="#miksi">Miksi</a>
+                <a href="#tule-mukaan">Tule mukaan</a>
+                <a href="program.html">Ohjelma</a>
+                <a href="events.html">Tulevat tapahtumat</a>
+                <a href="#lähteet">Lähteet</a>
+            </div>
+        </nav>-->
+    </header>
+
+    <div class="container">
+        <h2>Tapahtuman ohjelma</h2>
+        <ul class="program-list">
+            <li><strong>14:00</strong> - Aloituspuheenvuoro: Verso Vuorenmaa</li>
+            <li><strong>14:05</strong> - Puhe: Olli Pekka Haavisto</li>
+            <li><strong>14:15</strong> - Kävely Eduskuntatalolta Kauppatorille</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuButton.addEventListener('click', function () {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

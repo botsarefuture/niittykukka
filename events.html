@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulevat tapahtumat - Elokapina</title>
+    <link rel="stylesheet" href="static/css/xr_fi.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        .event-list {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .event-item {
+            background-color: #f1f8e9;
+            border: 2px solid #004d40;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .event-item h2 {
+            color: #004d40;
+            margin: 0 0 10px 0;
+        }
+
+        .event-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Tulevat tapahtumat - Elokapina</h1>
+        <p>Elokapinan jatkuva kampanja pölyttäjäkadon torjumiseksi</p>
+        <a href="index.html">Takaisin etusivulle</a>
+    </header>
+
+    <nav id="main-nav">
+        <button class="mobile-menu-button" aria-label="Open menu">VALIKKO</button>
+        <div class="nav-links">
+            <a href="#miksi">Miksi</a>
+            <a href="#tule-mukaan">Tule mukaan</a>
+            <a href="program.html">Ohjelma</a>
+            <a href="events.html">Tulevat tapahtumat</a>
+            <a href="#lähteet">Lähteet</a>
+        </div>
+    </nav>
+
+    <div class="event-list">
+        <div class="event-item">
+            <h2>4.8.2024 - Ensimmäinen mielenosoitus</h2>
+            <p>Klo 14:00 - Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</p>
+        </div>
+        <!-- Lisää muita tapahtumia tähän -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuButton.addEventListener('click', function () {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -232,3 +232,28 @@
   .title {
     color: var(--color-yellow);
   }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004d40;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.button-container {
+    width: 100%; /* Ensures the container takes full width */
+    text-align: center; /* Center-aligns the button */
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 10px; /* Adjust padding if needed for smaller screens */
+    }
+}
