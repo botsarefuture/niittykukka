@@ -69,11 +69,42 @@
 
     <div class="container" id="tapahtumat">
         <h3>Tulevat tapahtumat</h3>
-        <p>Seuraavat mielenosoitukset:</p>
-        <ul>
-            <li>4.8. klo 14: Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</li>
-        </ul>
+        <div class="event-grid">
+            <div class="event-box">
+                <h4>4.8. klo 14:00</h4>
+                <p>Lähtö Eduskuntatalon edestä, josta kuljemme Kauppatorille</p>
+            </div>
+            <!-- Add more events as needed -->
+        </div>
     </div>
+    
+    <style>
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    
+        .event-box {
+            background-color: #f1f8e9;
+            border: 2px solid #004d40;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+    
+        .event-box h4 {
+            color: var(--color-teal);
+            margin: 0 0 10px 0;
+        }
+    
+        .event-box p {
+            margin: 0;
+        }
+    </style>
+    
+    
 </body>
 
 </html>
