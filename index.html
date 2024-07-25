@@ -5,240 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pölyttäjien puolesta!</title>
-    <style>
-        :root {
-            --color-neon-green: #caff11; /* R 202 G 255 B 17 Pantone 809 */
-            --color-purple: #986297; /* R 152 G 98 B 151 PMS 2617 */
-            --color-pink: #ed9bc4; /* R 237 G 155 B 196 PMS 236 */
-            --color-yellow: #ffc11e; /* R 255 G 193 B 30 PMS 108 */
-            --color-teal: #195555; /* R 25 G 85 B 85 */
-            --color-white: #ffffff; /* R 255 G 255 B 255 */
-            --color-magenta: #c80082; /* R 200 G 0 B 130 PMS 239 */
-            --color-light-yellow: #f7ee6a; /* R 247 G 238 B 106 PMS 602 */
-            --color-blue: #3860aa; /* R 56 G 96 B 170 PMS 3005 */
-            --color-black: #000000; /* R 0 G 0 B 0 Black 6 */
-            --color-neon-pink: #ff1493; /* R 255 G 20 B 147 Pantone 806 */
-            --color-dark-pink: #cf6297; /* R 207 G 98 B 151 */
-            --color-orange: #dc4f00; /* R 220 G 79 B 0 PMS 1665 */
-            --color-light-green: #bed276; /* R 190 G 210 B 118 PMS 387 */
-            --color-sky-blue: #75d0f1; /* R 117 G 208 B 241 PMS 297 */
-        }
+    <link rel="stylesheet" href="/static/css/styles.css">
 
-        @font-face {
-            font-family: 'FucXed';
-            src: url('FUCXEDCAPSLatin.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'FucXedLatin';
-            src: url('FUCXEDCAPSLatin.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-
-        @font-face {
-            font-family: 'Crimson Text';
-            src: url('CrimsonText-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Crimson Text', serif;
-            background-color: #e0f7fa;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        header {
-            background-color: #004d40;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            animation: slideDown 1s ease-in-out;
-        }
-
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-100%);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: auto;
-            width: 100px;
-            max-height: 80px;
-            animation: rotateIn 1.5s ease-in-out;
-        }
-
-        @keyframes rotateIn {
-            0% {
-                transform: rotate(-360deg);
-            }
-
-            100% {
-                transform: rotate(0);
-            }
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'FucXed', sans-serif;
-            text-transform: uppercase;
-            color: #004d40;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #00796b;
-        }
-
-        nav a {
-            color: #ffffff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #004d40;
-        }
-
-        .container {
-            padding: 20px;
-            background-color: #ffffff;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .button {
-            background-color: #004d40;
-            border: none;
-            color: #ffffff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #00251a;
-            transform: scale(1.05);
-        }
-
-        .sources {
-            font-size: 0.9em;
-            color: #333;
-        }
-
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #004d40;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus,
-        textarea:focus {
-            border-color: #00796b;
-        }
-
-        .footer {
-            background-color: #004d40;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-        }
-
-        .mobile-menu-button {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-button {
-                display: block;
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: #ffffff;
-                padding-top: 7px;
-            }
-
-            header img {
-                display: none;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 10px;
-                text-align: center;
-                background-color: #004d40;
-                color: #ffffff;
-                text-decoration: none;
-            }
-
-            .nav-links a:hover {
-                background-color: #00251a;
-            }
-        }
-
-        .title {
-            color: var(--color-yellow);
-        }
-
-    </style>
-        <link rel="stylesheet" href="https://elokapina.fi/assets/main.css?20240724153603">
+    <link rel="stylesheet" href="https://elokapina.fi/assets/main.css?20240724153603">
 
 </head>
 
@@ -264,11 +33,15 @@
 
     <div class="container" id="miksi">
         <h2>Miksi osoitamme mieltä?</h2>
-        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten pölytyksestä.<sup>[1][2]</sup></p>
-        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse syntymään.<sup>[4]</sup></p>
+        <p>Noin 80 % viljelykasveista ja luonnonvaraisten kukkakasvien lajeista on riippuvaisia eläinten
+            pölytyksestä.<sup>[1][2]</sup></p>
+        <p>Ilman pölytystä kasvit eivät kykene tuottamaan siemeniä, jolloin uusia kasveja ei pääse
+            syntymään.<sup>[4]</sup></p>
         <p>Pölyttäjäkato kiihtyy ilmaston lämpenemisen seurauksena.</p>
         <p>Kato on suuri uhka globaalille ruoantuotannolle, ja sitä kautta myös ihmiskunnan tulevaisuudelle.</p>
-        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena, minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu entisestään.<sup>[3]</sup></p>
+        <p>Erityisesti vihannesten, marjojen ja hedelmien<sup>[4]</sup> tuotanto tulee kärsimään kadon seurauksena,
+            minkä takia tärkeiden vitamiinien saanti ja tasapainoisen ruokavalion mahdollisuus vaikeutuu
+            entisestään.<sup>[3]</sup></p>
         <a href="#lähteet">Lähteet</a>
     </div>
 
@@ -288,8 +61,10 @@
 
     <div class="container" id="tule-mukaan">
         <h3>Tule mukaan!</h3>
-        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
-        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button" target="_blank">Liity</a>
+        <p>On toimittava pölyttäjäkadon pysäyttämiseksi ennen kuin on liian myöhäistä. Tule kapinoimaan pölyttäjien
+            puolesta! Vaaditaan yhdessä konkreettisia toimia pölyttäjien suojelemiseksi.</p>
+        <a href="https://cryptpad.fr/form/#/2/form/view/T2LfsuYgv-rFDtEoONYAJqMlZ+TbiD-S0On0rpoR5kQ/" class="button"
+            target="_blank">Liity</a>
     </div>
 
     <div class="container" id="tapahtumat">
