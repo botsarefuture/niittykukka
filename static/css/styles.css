@@ -230,3 +230,6 @@
     }
   }
   
+  .title {
+    color: var(--color-yellow);
+  }
