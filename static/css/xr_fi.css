@@ -4878,3 +4878,70 @@ section.events .card-img-top {
   transition: color 0.15, background-color 0.15s, border-color 0.15s, fill 0.15s;
   fill: white;
 }
+
+
+/* Section styling */
+.home-intro-section {
+    position: relative;
+    background-color: #f4f4f4; /* Adjust if needed */
+  }
+  
+  /* New info section styling */
+  .more-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .more-info h3 {
+    color: #004d40;
+    margin-top: 0;
+  }
+  
+  .more-info p, .more-info ul {
+    color: #333;
+  }
+  
+  .more-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .more-info ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Bee icons in title */
+  .bee-icon {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle;
+    margin: 0 10px; /* Spacing around the bee icons */
+  }
+  
+  /* Decorative bee images */
+  .bee-decorations {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .bee-decoration {
+    width: 48px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  /* Optional media query for responsiveness */
+  @media (max-width: 768px) {
+    .bee-icon {
+      width: 20px; /* Smaller size for mobile */
+    }
+  
+    .bee-decoration {
+      width: 36px; /* Smaller size for mobile */
+    }
+  }
+  
