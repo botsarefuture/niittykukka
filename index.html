@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pölyttäjien puolesta!</title>
     <style>
+        :root {
+            --color-neon-green: #caff11; /* R 202 G 255 B 17 Pantone 809 */
+            --color-purple: #986297; /* R 152 G 98 B 151 PMS 2617 */
+            --color-pink: #ed9bc4; /* R 237 G 155 B 196 PMS 236 */
+            --color-yellow: #ffc11e; /* R 255 G 193 B 30 PMS 108 */
+            --color-teal: #195555; /* R 25 G 85 B 85 */
+            --color-white: #ffffff; /* R 255 G 255 B 255 */
+            --color-magenta: #c80082; /* R 200 G 0 B 130 PMS 239 */
+            --color-light-yellow: #f7ee6a; /* R 247 G 238 B 106 PMS 602 */
+            --color-blue: #3860aa; /* R 56 G 96 B 170 PMS 3005 */
+            --color-black: #000000; /* R 0 G 0 B 0 Black 6 */
+            --color-neon-pink: #ff1493; /* R 255 G 20 B 147 Pantone 806 */
+            --color-dark-pink: #cf6297; /* R 207 G 98 B 151 */
+            --color-orange: #dc4f00; /* R 220 G 79 B 0 PMS 1665 */
+            --color-light-green: #bed276; /* R 190 G 210 B 118 PMS 387 */
+            --color-sky-blue: #75d0f1; /* R 117 G 208 B 241 PMS 297 */
+        }
+
         @font-face {
             font-family: 'FucXed';
             src: url('FUCXEDCAPSLatin.otf') format('opentype');
@@ -216,7 +234,7 @@
         }
 
         .title {
-            color: 
+            color: var(--color-yellow);
         }
 
     </style>
@@ -226,7 +244,7 @@
 
 <body>
     <header>
-        <h1>Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
+        <h1 class="title">Pölyttäjien puolesta - Pölyttäjäkatoa vastaan!</h1>
         <p>"Niittykukka" -mielenosoitukset pölyttäjien puolesta!</p>
         <p>4.8. KLO 14: LÄHTÖ EDUSKUNTATALON EDESTÄ, JOSTA KULJEMME KAUPPATORILLE</p>
         <p>Järjestäjänä: Elokapina</p>
@@ -254,7 +272,19 @@
         <a href="#lähteet">Lähteet</a>
     </div>
 
-    
+    <div class="container" id="lähteet">
+        <h3>Lähteet</h3>
+        <div class="sources">
+            <p>[1]: Pölyttäjäkato yritetään pysäyttää 2030 mennessä: Komissio ehdottaa uusia rajoituksia
+                tuholaistorjuntaan - Maatalous - Maaseudun Tulevaisuus</p>
+            <p>[2]: <a href="https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en"
+                    target="_blank">https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:52018DC0395&from=en</a>
+            </p>
+            <p>[3]: <a href="https://www.duodecimlehti.fi/duo14408"
+                    target="_blank">https://www.duodecimlehti.fi/duo14408</a></p>
+            <p>[4]: <a href="https://yle.fi/a/3-12521737" target="_blank">https://yle.fi/a/3-12521737</a></p>
+        </div>
+    </div>
 
     <div class="container" id="tule-mukaan">
         <h3>Tule mukaan!</h3>
