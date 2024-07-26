@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Karuselli</title>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <span class="caption" id="caption"></span>
+            <!-- Currently doesnt work <span id="long-caption-toggle" class="caption pointer-text" style="display: block;">
+                <br>
+                <span id="show-long-caption" class="underline-text">(Show Caption)</span>
+            </span>-->
+            <img id="current-slide" class="slide" src="" alt="">
+            <button id="prevButton" class="nav-button">❮</button>
+            <button id="nextButton" class="nav-button">❯</button>
+            <audio id="audio-speech" autoplay loop preload="auto" controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+            <div id="long-caption-container" class="long-caption-container small-text" style="display: hidden;">
+                <span id="long-caption-text"></span>
+                <div class="tiny-text pull-to-right">
+                    <span id="closeLongCaption" class="pointer-text underline-text">Close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
