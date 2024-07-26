@@ -1,0 +1,229 @@
+ /* General Styles */
+ body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f8e9;
+    color: #333;
+}
+
+header {
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #00796b;
+}
+
+.title {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border: 2px solid #004d40;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    padding: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.container h2,
+.container h3 {
+    color: #004d40;
+    margin-bottom: 15px;
+    font-family: 'Fucxed', sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.container h3 {
+    font-size: 1.6em;
+}
+
+.program-list {
+    list-style: none;
+    padding: 0;
+}
+
+.program-list li {
+    background-color: #ffffff;
+    border: 2px solid #004d40;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.program-list li:hover {
+    background-color: #e0f2f1;
+}
+
+.program-list li strong {
+    color: #004d40;
+    font-size: 1.2em;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #004d40;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #00332a;
+    transform: scale(1.05);
+}
+
+.mobile-menu-button {
+    display: none;
+    /* Hidden by default */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h2,
+    .container h3 {
+        font-size: 1.6em;
+    }
+
+    .container h3 {
+        font-size: 1.4em;
+    }
+
+    .program-list li {
+        padding: 15px;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #004d40;
+        width: calc(100% - 40px);
+        border-radius: 8px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+        display: block;
+    }
+
+    .nav-links a:hover {
+        background-color: #00796b;
+    }
+
+    .mobile-menu-button {
+        display: inline-block;
+        padding: 10px;
+        background-color: #004d40;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Fucxed', sans-serif;
+}
+
+.cta {
+background-color: var(--color-light-yellow);
+border: 2px solid var(--color-yellow);
+padding: 20px;
+margin: 20px auto;
+max-width: 90%;
+border-radius: 12px;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+text-align: center;
+animation: fadeIn 1.5s ease-in-out;
+font-size: 1.2em;
+color: var(--color-black);
+}
+
+.cta p {
+margin: 0;
+}
